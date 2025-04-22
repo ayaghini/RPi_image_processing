@@ -32,7 +32,7 @@ def detect_live_webcam(model_path: str='yolo11x.pt', cam_index: int=0):
 
         # Annotate and display
         annotated = results[0].plot()
-        cv2.imshow('YOLOv8 Live (CUDA)' if device=='cuda' else 'YOLOv8 Live (CPU)', annotated)
+        cv2.imshow('YOLOv11 Live (CUDA)' if device=='cuda' else 'YOLOv11 Live (CPU)', annotated)
 
         if cv2.waitKey(1) & 0xFF in (ord('q'), ord('Q')):
             break
@@ -46,8 +46,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         '--model', '-m',
-        default='yolov8x.pt',
-        help="Path to YOLOv8 model (.pt). Defaults to 'yolov8x.pt'."
+        default='yolo11x.pt',
+        help="Path to YOLOv11 model (.pt). Defaults to 'yolo11x.pt'."
     )
     parser.add_argument(
         '--cam', '-c',
