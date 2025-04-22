@@ -3,7 +3,7 @@ import torch
 from ultralytics import YOLO
 import argparse
 
-def detect_live_webcam(model_path: str='yolov8x.pt', cam_index: int=0):
+def detect_live_webcam(model_path: str='yolo11x.pt', cam_index: int=0):
     """
     Run YOLOv8 on webcam frames, using CUDA if available, and display live detections.
     """
